@@ -1,38 +1,18 @@
-<script>
-<!-- CSS FULL LAYAR -->
-document.write(unescape('%3Cdiv%20class%3D%22video-container%22%3E%0A%20%20%3Cscript%20src%3D%22//content.jwplatform.com/libraries/SAHhwvZq.js%22%3E%3C/script%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20body%20%7B%0A%20%20%20%20%20%20%20%20width%3A100%25%3B%0A%20%20%20%20%20%20%20%20height%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20font-family%3A%20Poppins%3B%0A%20%20%20%20%20%20%20%20display%3Ablock%3B%0A%20%20%20%20%20%20%20%20position%3A%20absolute%3B%0A%20%20%20%20%20%20%20%20padding%3A%200px%3B%0A%20%20%20%20%20%20%20%20margin%3A%200px%3B%0A%20%20%20%20%20%20%20%20background%3A%20%23000%3B%0A%20%20%20%20%7D%0A%20%20%20%20player%7B%0A%20%20%20%20%20%20%20%20width%3A100%25%3B%0A%20%20%20%20%20%20%20%20height%3A%20100%25%3B%0A%20%20%20%20%20%20%09position%3A%20top%3B%0A%20%20%20%20%20%20%20%20display%3Ainline-block%3B%0A%20%20%20%20%20%20%20%20-webkit-user-select%3Anone%3B%0A%20%20%20%20%20%20%20%20-moz-user-select%3Anone%3B%0A%20%20%20%20%20%20%20%20-ms-user-select%3Anone%3B%0A%20%20%20%20%20%20%20%20user-select%3Anone%3B%0A%20%20%20%20%7D%0A%20a%2C%20a%3Ahover%2C%20a%3Afocus%2C%20a%3Aactive%20%7B%0A%20%20%20%20%20%20text-decoration%3A%20none%3B%0A%20%7D%0A%0A%3C/style%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20div%20a%20img%7Bvisibility%3Ahidden%3B%7D%0Abody%3A%3Abefore%20%7B%0A%20%20%20%20%20%20%20%20position%3A%20absolute%3B%0A%20%20%20%20%20%20%20%20top%3A%205px%3B%0A%20%20%20%20%20%20%20%20right%3A%205px%3B%0A%20%20%20%20%20%20%20%20z-index%3A%2010%3B%0A%20%20%20%20%20%20%20%20content%3A%20%27%27%3B%0A%20%20%20%20%20%20%20%20height%3A%2070px%3B%0A%20%20%20%20%20%20%20%20width%3A%20110px%3B%0A%20%20%20%20%20%20%20%20background%3A%20url%28%27%20%27%29%20no-repeat%3B%0A%20%20%20%20%20%20%20%20background-size%3A%20110px%20auto%2C%20auto%3B%0A%20%20%20%20%20%20%20%20opacity%3A%200.4%3B%0A%20%20%20%20%7D%0A.logo-overlay%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20position%3A%20absolute%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20bottom%3A%205px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20right%3A%2010px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20width%3A%20100px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20height%3A%20auto%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20opacity%3A%202.0%3B%0A%20%20%20%20%20%20%20%20%7D%0A%3C/style%3E'));
-</script>
+#EXTM3U
+#EXT-X-VERSION:3
 
-<div id="player"></div>
-<script>
+# 360p Stream
+#EXT-X-STREAM-INF:BANDWIDTH=800000,RESOLUTION=640x360,CODECS="avc1.42e01e,mp4a.40.2"
+https://surrit.com/b42de513-0df0-45e6-b0a2-536860621e2a/360p/video.m3u8
 
-    var playerInstance = jwplayer("player");
+# 480p Stream
+#EXT-X-STREAM-INF:BANDWIDTH=1400000,RESOLUTION=854x480,CODECS="avc1.4d401e,mp4a.40.2"
+https://surrit.com/b42de513-0df0-45e6-b0a2-536860621e2a/480p/video.m3u8
 
-    playerInstance.setup({
+# 720p Stream
+#EXT-X-STREAM-INF:BANDWIDTH=2800000,RESOLUTION=1280x720,CODECS="avc1.4d401f,mp4a.40.2"
+https://surrit.com/b42de513-0df0-45e6-b0a2-536860621e2a/720p/video.m3u8
 
-        playlist: [{
-            "title": "CHENX DAYAT TV",
-            "sources": [
-                {
-                    "default": false,
-                    "type": "dash",
-                    "file": 'https://av-ch-cdn.mncnow.id/live/eds/iNewsTV-HDD/sa_dash_vmx/iNewsTV-HDD.mpd',
-                    "drm": {
-                        "clearkey": { "keyId": "a31cf5136789514b7e12b9cc99307c84", "key": "980e54d671ffc2b2f4cf54e75cae0ac2" }
-                    },
-                    "label": "0"
-                }
-            ]
-        }],
-        width: "100%",
-        height: "100%",
-        aspectratio: "16:9",
-        autostart: true,
-	cast:{},
-	sharing: {}
-    });
-</script>
-
-<script>
-document.write(unescape('%3Cstyle%3E%0A/*%20Atur%20video%20agar%20full%20layar%20*/%0A.video-container%20%7B%0A%20%20%20%20position%3A%20fixed%3B%20/*%20Agar%20menempel%20pada%20layar%20*/%0A%20%20%20%20top%3A%200%3B%0A%20%20%20%20left%3A%200%3B%0A%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20height%3A%20100%25%3B%0A%20%20%20%20z-index%3A%209999%3B%20/*%20Prioritas%20tampil%20*/%0A%20%20%20%20background%3A%20black%3B%20/*%20Latar%20belakang%20hitam%20*/%0A%20%20%20%20display%3A%20flex%3B%0A%20%20%20%20align-items%3A%20center%3B%0A%20%20%20%20justify-content%3A%20center%3B%0A%20%20%20%20overflow%3A%20hidden%3B%0A%7D%0A%0A.video-container%20iframe%20%7B%0A%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20height%3A%20100%25%3B%0A%20%20%20%20border%3A%20none%3B%0A%7D%0A%20%20body%20%7B%0A%20%20%20%20margin%3A%200%3B%0A%20%20%20%20padding%3A%200%3B%0A%20%20%20%20overflow%3A%20hidden%3B%0A%7D%0A%3C/style%3E'));
-</script>
+# 1080p Stream
+#EXT-X-STREAM-INF:BANDWIDTH=5000000,RESOLUTION=1920x1080,CODECS="avc1.640029,mp4a.40.2"
+https://surrit.com/b42de513-0df0-45e6-b0a2-536860621e2a/1080p/video.m3u8
